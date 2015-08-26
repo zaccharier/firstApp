@@ -1,4 +1,7 @@
 class Weatherforecast < ActiveRecord::Base
+  belongs_to :office
+  
+  
   validate :validate_office_id
   validates :office_id, presence: true, numericality: { only_integer: true}, unless: -> { errors.include?(:office_id) }
   validates :temp, presence: true
