@@ -6,6 +6,12 @@ class OfficesController < ApplicationController
   def index
     @offices = Office.all
   end
+  
+  def get_current_weather
+    
+    
+  end
+  
 
   # GET /offices/1
   # GET /offices/1.json
@@ -69,6 +75,8 @@ class OfficesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def office_params
-      params.require(:office).permit(:name, :contact, :adress, :number_of_employees)
+      params.require(:office).permit(:name, :contact, :address, :number_of_employees)
     end
+    
+    
 end

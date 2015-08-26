@@ -3,11 +3,11 @@
 one:
   name: MyString
   contact: MyString
-  adress: MyString
+  address: MyString
   number_of_employees: 1
 
 two:
   name: MyString
   contact: MyString
-  adress: MyString
+  address: MyString
   number_of_employees: 1

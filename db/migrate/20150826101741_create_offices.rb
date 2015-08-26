@@ -3,7 +3,7 @@ class CreateOffices < ActiveRecord::Migration
     create_table :offices do |t|
       t.string :name
       t.string :contact
-      t.string :adress
+      t.string :address
       t.integer :number_of_employees
 
       t.timestamps null: false

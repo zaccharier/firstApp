@@ -35,7 +35,7 @@ class OfficesControllerTest < ActionController::TestCase
   end
 
   test "should update office" do
-    patch :update, id: @office, office: { adress: @office.adress, contact: @office.contact, name: @office.name, number_of_employees: @office.number_of_employees }
+    patch :update, id: @office, office: { address: @office.adress, contact: @office.contact, name: @office.name, number_of_employees: @office.number_of_employees }
     assert_redirected_to office_path(assigns(:office))
   end
 
