@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  office_id: 1
+  temperature: 1
+  humidity_level: 1
+  sunlight: MyString
+  date: 2015-08-26
+
+two:
+  office_id: 1
+  temperature: 1
+  humidity_level: 1
+  sunlight: MyString
+  date: 2015-08-26
