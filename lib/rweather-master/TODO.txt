@@ -1,1 +1,0 @@
-* Implemente forecasts feature.
