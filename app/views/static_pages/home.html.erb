@@ -11,9 +11,17 @@
   <body>
     <div class="center jumbotron">
       <h1>Welcome to EkiWeather</h1>
-      <h2>Choose your Office</h2>
-      <%= link_to "Check the weather there!", info_path, class: "btn btn-lg btn-primary" %>
     </div>
+    <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
+        <span class="caret"></span></button>
+        <ul class="dropdown-menu dropdown-menu-middle">
+          <li><a href="#">HTML</a></li>
+          <li><a href="#">CSS</a></li>
+          <li><a href="#">JavaScript</a></li>
+        </ul>
+      </div>
+    <%= link_to "Check the weather there!", info_path, class: "btn btn-lg btn-primary" %>
   </body>
 </html>
 
