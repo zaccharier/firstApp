@@ -13,12 +13,12 @@
       <h1>Welcome to EkiWeather</h1>
     </div>
     <div class="dropdown">
-        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Choose your office here
         <span class="caret"></span></button>
         <ul class="dropdown-menu dropdown-menu-middle">
-          <li><a href="#">HTML</a></li>
-          <li><a href="#">CSS</a></li>
-          <li><a href="#">JavaScript</a></li>
+          <% Office.all.each do |office| %>
+            <li><a href=static_pages#set_office(office)><%=office.name%></li>
+          <%end %>
         </ul>
       </div>
     <%= link_to "Check the weather there!", info_path, class: "btn btn-lg btn-primary" %>
