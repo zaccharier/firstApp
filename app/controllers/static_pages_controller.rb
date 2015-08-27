@@ -1,5 +1,5 @@
-class StaticPageController < ApplicationController
+class StaticPagesController < ApplicationController
   def home
-    render text: "Test"
+
   end
 end
