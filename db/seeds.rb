@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+offices=Office.create([{name: 'Paris', address: '136 avenue des Champs Elysees, Paris'},
+                       {name:'Londres', address:'74 Rivington Street, London' },
+                       {name: 'New-York', address:'60 Broad Street, New-York,NY'},
+                       {name:'Hong-Kong', address:'Yun Ping Road, 28, Hong Kong'}])

@@ -16,6 +16,7 @@ class OfficesController < ApplicationController
   # GET /offices/1
   # GET /offices/1.json
   def show
+    @office = Office.find(2)
   end
 
   # GET /offices/new
