@@ -13,7 +13,8 @@ class Office < ActiveRecord::Base
   end
   
   def location
-    [51.52238797921441, -0.08366235665359283]
+    location = Geocoder.search(self.address)
+    [location[0].latitude, location[0].longitude]
   end
  
 end
