@@ -7,16 +7,18 @@ class OfficesController < ApplicationController
     @offices = Office.all
   end
   
-  def get_current_weather
-    
-    
-  end
   
 
   # GET /offices/1
   # GET /offices/1.json
   def show
-    
+    today_date=Date.today
+    if (@office.weatherforecasts.find_by(date: today_date).nil?)
+      barometer=Barometer.new(@office.address)
+      today_temperature=barometer.measure.current.temperature
+      @office.weatherforecasts.build(date:today_date, temperature: today_temperature)
+      @office.save
+    end
   end
 
   # GET /offices/new
