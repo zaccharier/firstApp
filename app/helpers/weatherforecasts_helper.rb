@@ -1,2 +1,0 @@
-module WeatherforecastsHelper
-end

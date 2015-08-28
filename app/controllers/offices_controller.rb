@@ -1,5 +1,5 @@
 class OfficesController < ApplicationController
-  before_action :set_office, only: [:show, :edit, :update, :destroy]
+ before_action :set_office, only: [:show, :edit, :update, :destroy]
 
   # GET /offices
   # GET /offices.json
@@ -7,22 +7,27 @@ class OfficesController < ApplicationController
     @offices = Office.all
   end
   
-  def get_current_weather
-    
-    
-  end
   
 
   # GET /offices/1
   # GET /offices/1.json
   def show
-    @office = Office.find(2)
+    today_date=Date.today
+    if (@office.weatherforecasts.find_by(date: today_date).nil?)
+      barometer=Barometer.new(@office.address)
+      today_temperature=barometer.measure.current.temperature
+      @office.weatherforecasts.build(date:today_date, temperature: today_temperature)
+      @office.save
+    end
   end
 
   # GET /offices/new
   def new
     @office = Office.new
   end
+
+  
+
 
   # GET /offices/1/edit
   def edit
@@ -71,7 +76,7 @@ class OfficesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_office
-      @office = Office.find(params[:id])
+      @office = Office.find(params[:id]) #dans l'idéal à la place de 1 on aurait params(:id)
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
