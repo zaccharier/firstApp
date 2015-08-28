@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   #root 'application#welcome'
   root 'static_pages#home'
   get 'info' => 'static_pages#info'
-  get 'show' => 'offices#show'
+  get 'show/:id' => 'offices#show'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

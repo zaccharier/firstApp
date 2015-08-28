@@ -17,7 +17,7 @@
         <span class="caret"></span></button>
         <ul class="dropdown-menu dropdown-menu-middle">
           <% Office.all.each do |office| %>
-            <li><%= link_to office.name, show_path,class: "btn btn-link" %> </li>
+            <li><%= link_to office.name, show_path/office.id,class: "btn btn-link" %> </li>
           <%end %>
         </ul>
       </div>

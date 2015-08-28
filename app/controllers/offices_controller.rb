@@ -1,5 +1,5 @@
 class OfficesController < ApplicationController
-  before_action :set_office, only: [:show, :edit, :update, :destroy]
+ # before_action :set_office, only: [:show, :edit, :update, :destroy]
 
   # GET /offices
   # GET /offices.json
@@ -15,8 +15,8 @@ class OfficesController < ApplicationController
 
   # GET /offices/1
   # GET /offices/1.json
-  def show
-    @office = Office.find(2)
+  def show(office)
+    @office=office
   end
 
   # GET /offices/new
@@ -70,12 +70,13 @@ class OfficesController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_office
-      @office = Office.find(params[:id])
-    end
+    #def set_office
+     # @office = Office.find(1)
+    #end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def office_params
+      debugger
       params.require(:office).permit(:name, :contact, :address, :number_of_employees)
     end
     
