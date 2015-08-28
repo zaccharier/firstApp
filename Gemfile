@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 
 #Gem to handle weather forecast
 gem 'barometer'
+gem 'gmaps4rails'
 gem 'rails',        '4.2.2'
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'sass-rails', '>= 3.2'
