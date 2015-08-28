@@ -12,5 +12,9 @@ class Office < ActiveRecord::Base
     today_temperature
   end
   
+  def location
+    location = Geocoder.search(self.address)
+    [location[0].latitude, location[0].longitude]
+  end
  
 end
