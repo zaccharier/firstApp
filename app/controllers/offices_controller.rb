@@ -16,6 +16,7 @@ class OfficesController < ApplicationController
   # GET /offices/1
   # GET /offices/1.json
   def show
+    
   end
 
   # GET /offices/new
@@ -23,13 +24,7 @@ class OfficesController < ApplicationController
     @office = Office.new
   end
 
-  def sunlight
-    "rainy"
-  end
   
-  def temperature
-    23
-  end
 
 
   # GET /offices/1/edit

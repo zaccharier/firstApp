@@ -22,14 +22,5 @@ ActiveRecord::Schema.define(version: 20150826121039) do
     t.datetime "updated_at",          null: false
   end
 
-  create_table "weatherforecasts", force: :cascade do |t|
-    t.integer  "office_id"
-    t.integer  "temperature"
-    t.integer  "humidity_level"
-    t.string   "sunlight"
-    t.date     "date"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
-  end
 
 end
