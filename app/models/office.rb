@@ -12,5 +12,8 @@ class Office < ActiveRecord::Base
     today_temperature
   end
   
+  def location
+    [51.52238797921441, -0.08366235665359283]
+  end
  
 end

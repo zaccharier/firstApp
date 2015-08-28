@@ -6,6 +6,10 @@
                                               'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
+    <!--link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" /-->
+    <!--script src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script-->
+
+
   </head>
   <body>
     <div class="center jumbotron">
@@ -14,7 +18,17 @@
     <div class="center jumbotron">
       <h2>This office is located at <%= @office.address%></h2>
     </div>
-
+    <div id="map">
+      <%= map(:center => {
+        :latlng => @office.location,
+        :zoom => 18},
+        :markers => [
+        {:latlng => @office.location,
+        :popup => "Eki @"+@office.name
+        }
+        ]) 
+      %>
+    </div>
   </body>
 </html>
 
