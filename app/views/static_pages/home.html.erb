@@ -13,9 +13,9 @@
       <h1>Welcome to EkiWeather</h1>
     </div>
     <div class="dropdown">
-        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Choose your office here
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false" aria-haspopup=”true”>Choose your office here
         <span class="caret"></span></button>
-        <ul class="dropdown-menu dropdown-menu-middle">
+        <ul class="dropdown-menu dropdown-menu-middle" role="menu">
           <% Office.all.each do |office| %>
             <li><%= link_to office.name, office_path(office),class: "btn btn-link" %> </li>
           <%end %>
